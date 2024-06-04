@@ -46,9 +46,14 @@ public class Main {
     }
 
     public void dealCards() {
-        for (int r = 0; r < player1.hand.length; r = r + 1) {
-            players[r].hand[r] = deck[r];
-        }
+        int counter = 0;
+     for (int z = 0; z < players.length; z=z+1) {
+         for (int r = 0; r < player1.hand.length; r = r + 1) {
+             players[z].hand[r] = deck[counter];
+             counter++;
+
+         }
+     }
         for (int x = 0; x < 4; x = x + 1) {
             players[x].printHand();
         }
